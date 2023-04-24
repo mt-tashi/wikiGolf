@@ -1,7 +1,7 @@
 const word1 = 'JavaScript';
 const word2 = 'マカロン';
 const url = `https://ja.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${word1}%20${word2}&utf8=1`;
-
+// 幅優先探索でリンクをたどる
 fetch(url, { mode: 'cors', headers: { 'Origin': 'https://ja.wikipedia.org' } })
 	.then(response => response.json())
 	.then(data => {
